@@ -1,0 +1,54 @@
+html,body {
+    margin:0;
+    padding:0;
+}
+:focus {
+    outline: 0;
+}
+ol, ul {
+    list-style: none;
+    padding: 0;
+}
+a:focus {
+    outline: thin dotted;
+}
+a:active,
+a:hover {
+    outline: 0;
+}
+a {
+    text-decoration: none;
+}
+.main-side {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100%;
+    z-index: 1000;
+    box-sizing: border-box;
+    transition: transform .3s ease-in-out,width .3s ease-in-out;
+    background-color: seashell;
+}
+.sidebar-menu > li.treeview > .treeview-menu {
+    display: none;
+}
+.sidebar-menu > .treeview > a > .pull-right-container {
+    position: absolute;
+    right: 20px;
+}
+.sidebar-menu > li > a {
+    padding: 10px 20px;
+    display: block;
+}
+
+.sidebar-menu > li.menu-open > a > .pull-right-container > .pull-right {
+    transform: rotate(-90deg);
+}
+.sidebar-menu > li.menu-open > .treeview-menu {
+    display: block;
+}
+.treeview > ul > li > a {
+    padding: 10px 30px;
+    display: block;
+}
