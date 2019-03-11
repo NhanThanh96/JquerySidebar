@@ -31,6 +31,7 @@ a {
     background-color: seashell;
 }
 .sidebar-menu > li.treeview > .treeview-menu {
+    overflow: hidden;
     display: none;
 }
 .sidebar-menu > .treeview > a > .pull-right-container {
@@ -42,12 +43,10 @@ a {
     display: block;
 }
 
-.sidebar-menu > li.menu-open > a > .pull-right-container > .pull-right {
+.sidebar-menu > li > a.show > .pull-right-container > .pull-right {
     transform: rotate(-90deg);
 }
-.sidebar-menu > li.menu-open > .treeview-menu {
-    display: block;
-}
+ 
 .treeview > ul > li > a {
     padding: 10px 30px;
     display: block;
