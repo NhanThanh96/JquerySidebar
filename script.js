@@ -1,6 +1,5 @@
 $(document).ready(function(){
-    var pullRight = $('.pull-right');
-    var treeview = $('.treeview');
+     
 
     $(".toggle").on("click", function(e){
         e.preventDefault();
@@ -21,5 +20,8 @@ $(document).ready(function(){
 
         }
     });
-
+    $("#toggleButton").on("click", function(){
+        $(".sidebar-menu > li").toggleClass("collapse");
+        $(".sidebar-menu > li").slideToggle(350);
+    });
   });
