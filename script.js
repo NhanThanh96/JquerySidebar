@@ -35,6 +35,22 @@ $(document).ready(function(){
     $("#toggleButton").on("click", function(){
         $(".main-side").toggleClass("collapse");
         $(this).parent().next().toggleClass("collapse");
-        $(".overlay").toggleClass("show");
+        $(".overlay").toggleClass("hide");
     });
+
+    if (parseInt($(window).width()) <= 425) {
+        
+        $('.overlay').on('click', function(){         
+            $(".overlay").addClass("hide");
+            $(".main-side").addClass("collapse");
+            $("#toggleButton").addClass("collapse");
+        });
+
+        $(".sidebar-menu > li > a").on("click", function(){
+            $(".overlay").removeClass("hide");
+            $(".main-side").removeClass("collapse");
+            $("#toggleButton").removeClass("collapse");
+        });
+    }; 
+ 
   });
