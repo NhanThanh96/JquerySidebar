@@ -1,6 +1,15 @@
 $(document).ready(function(){
      
+    $(".sidebar-menu > li > a").on("click", function(){
+        $(this).parents(".sidebar-menu").find("li.treeview > a.active").removeClass("active");
+        $(this).addClass("active");
+    });
 
+    $(".sidebar-menu > li > ul.treeview-menu > li > a").on("click", function(){
+        $(this).parents(".sidebar-menu").find(".treeview-menu > li > a.active").removeClass("active");
+        $(this).addClass("active");
+    });
+    
     $(".toggle").on("click", function(e){
         e.preventDefault();
       
@@ -20,7 +29,12 @@ $(document).ready(function(){
 
         }
     });
+
+     
+     
     $("#toggleButton").on("click", function(){
         $(".main-side").toggleClass("collapse");
+        $(this).parent().next().toggleClass("collapse");
+        $(".overlay").toggleClass("show");
     });
   });
