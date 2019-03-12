@@ -21,7 +21,6 @@ $(document).ready(function(){
         }
     });
     $("#toggleButton").on("click", function(){
-        $(".sidebar-menu > li").toggleClass("collapse");
-        $(".sidebar-menu > li").slideToggle(350);
+        $(".main-side").toggleClass("collapse");
     });
   });

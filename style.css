@@ -30,6 +30,9 @@ a {
     transition: transform .3s ease-in-out,width .3s ease-in-out;
     background-color: seashell;
 }
+.sidebar-menu {
+    max-width: 250px;
+}
 .sidebar-menu > li.treeview > .treeview-menu {
     overflow: hidden;
     display: none;
@@ -37,10 +40,12 @@ a {
 .sidebar-menu > .treeview > a > .pull-right-container {
     position: absolute;
     right: 20px;
+    top: 13px;
 }
 .sidebar-menu > li > a {
     /* padding: 10px 20px; */
     display: block;
+    position: relative;
 }
 
 .sidebar-menu > li > a.show > .pull-right-container > .pull-right {
@@ -55,9 +60,21 @@ a {
     padding: 14px;
     display: inline-block;
 }
-.sidebar-menu > li.collapse {
-    max-width: 50px;
+.main-side {
+    width: 250px;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+    -webkit-transition: width 1s; /* Safari */
+    transition: width 1s;
+} 
+.main-side.collapse {
+    width: 50px;
+} 
+
+.main-side.collapse .sidebar-menu .treeview a .pull-right-container{
+    display: none;
+} 
+.main-side.collapse .sidebar-menu .treeview ul.treeview-menu{
+    height: 0;
 } 
