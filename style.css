@@ -99,6 +99,9 @@ a {
 .treeview-menu > li > a.active {
     background-color: red;
 }
+.overlay {
+    opacity : 0;
+}
 @media only screen and (max-width: 425px) {
     .main {
         margin-left: 80px ;
